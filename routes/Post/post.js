@@ -136,7 +136,7 @@ module.exports.dislikePost = async (req, res) => {
 
         if (post.likes.includes(req.body.userId)) {
             await post.updateOne({ $pull: { likes: req.body.userId } });
-            res.status(200).json("The post is disliked.");
+            res.status(200).json("The post is unliked.");
         } else {
             res.status(200).json("You hadn't liked this post boss!")
         }

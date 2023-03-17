@@ -24,19 +24,19 @@ route.get('/api/posts', home.getPostHome);                  // GET Post Home
 route.post('/api/registerUser', user.createUser);           // Create User
 route.get('/api/authenticate', user.authenticate);          // Authenticate User
 route.get('/api/user/:id', user.findUserById);              // Get User By Id
-route.put('/api/updateUser/:id', user.updateUser);          // Update User
-route.put('/api/follow/:id', user.followUser);              // Follow User
-route.put('/api/unfollow/:id', user.unFollowUser);          // Unfollow User
+route.post('/api/updateUser/:id', user.updateUser);          // Update User
+route.post('/api/follow/:id', user.followUser);              // Follow User
+route.post('/api/unfollow/:id', user.unFollowUser);          // Unfollow User
 route.delete('/api/deleteUser/:id', user.deleteUser);       // Delete User
 
 // Post - Create, Get, Update, Delete, Like, Dislike, Comment
 route.post('/api/posts', posts.createPost);                 // Create User
 route.get('/api/posts/:id', posts.getPost)                  // Get Post
 route.get('/api/all_posts', posts.getAllPost)               // Get Tmeline Posts
-route.put('/api/updatePost/:id', posts.updatePost)          // Update Post
-route.put('/api/like/:id', posts.likePost)                  // Like Post
-route.put('/api/unlike/:id', posts.dislikePost)             // Dislike Post
-route.put('/api/comment/:id', posts.commentPost)            // Comment Post
+route.post('/api/updatePost/:id', posts.updatePost)          // Update Post
+route.post('/api/like/:id', posts.likePost)                  // Like Post
+route.post('/api/unlike/:id', posts.dislikePost)             // Dislike Post
+route.post('/api/comment/:id', posts.commentPost)            // Comment Post
 route.delete('/api/posts/:id', posts.deletePost)            // Delete Post
 
 // Export Module
